@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJe-eS-kZ6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Homework_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQS-gv-4xc">
+                                <rect key="frame" x="107" y="458" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="h1M-Dx-aDy"/>
+                                    <constraint firstAttribute="height" constant="50" id="kKd-wf-fNR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Star view">
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="routeToStarView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIH-ej-mI6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-UY-pAe">
+                                <rect key="frame" x="107" y="388" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HCn-Eg-HWe"/>
+                                    <constraint firstAttribute="height" constant="50" id="HOE-8I-tff"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Paint">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="routeToPaint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7X-Mc-u0J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQS-gv-4xc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blG-3S-dXQ"/>
+                            <constraint firstItem="BCG-UY-pAe" firstAttribute="centerX" secondItem="aQS-gv-4xc" secondAttribute="centerX" id="cHM-a3-wTz"/>
+                            <constraint firstItem="aQS-gv-4xc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="tbg-Pq-Txr"/>
+                            <constraint firstItem="aQS-gv-4xc" firstAttribute="top" secondItem="BCG-UY-pAe" secondAttribute="bottom" constant="20" id="z3a-Yq-7FK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VOZ-ID-ISv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Star View Controller-->
+        <scene sceneID="yHq-0c-2AR">
+            <objects>
+                <viewController storyboardIdentifier="StarViewController" id="2Jh-eg-3b2" customClass="StarViewController" customModule="Homework_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vUK-Px-J6a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXY-vn-4eI" customClass="StarView" customModule="Homework_12" customModuleProvider="target">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="1ac-vP-UIB"/>
+                                    <constraint firstAttribute="width" constant="400" id="cOW-qD-8Fj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xqf-nl-eHh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VXY-vn-4eI" firstAttribute="centerY" secondItem="vUK-Px-J6a" secondAttribute="centerY" id="Pbh-Mc-k9m"/>
+                            <constraint firstItem="VXY-vn-4eI" firstAttribute="centerX" secondItem="vUK-Px-J6a" secondAttribute="centerX" id="cge-1a-zn6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xv3-24-dQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197.1014492753625" y="420.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EZW-OZ-PhY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJe-eS-kZ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gfl-ME-epO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="99B-qs-jsZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rW-u3-bgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Paint View Controller-->
+        <scene sceneID="pqz-cU-akE">
+            <objects>
+                <viewController storyboardIdentifier="PaintViewController" id="JaK-Id-jcz" customClass="PaintViewController" customModule="Homework_12" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XpN-5S-gWe"/>
+                        <viewControllerLayoutGuide type="bottom" id="gl6-WR-QAH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGK-Ca-AWo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrn-U9-7gq" customClass="PaintView" customModule="Paint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="111" width="1024" height="657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96161566840000001" green="0.97997456250000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v6Q-uH-Ctu">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrc-Yp-61V">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="100"/>
+                                        <state key="normal" title="circle" backgroundImage="circle">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shapePressed:" destination="JaK-Id-jcz" eventType="touchUpInside" id="8XS-kr-fMC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuI-k7-KFw">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="100"/>
+                                        <state key="normal" title="triangle" image="triangle">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shapePressed:" destination="JaK-Id-jcz" eventType="touchUpInside" id="xAc-Ip-fbb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq3-gC-QxZ">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="100"/>
+                                        <state key="normal" title="rectangle" image="rectangle">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shapePressed:" destination="JaK-Id-jcz" eventType="touchUpInside" id="2yN-SU-vbE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDi-qF-TQY">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="100"/>
+                                        <state key="normal" title="pen" image="pen">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shapePressed:" destination="JaK-Id-jcz" eventType="touchUpInside" id="Q4Y-ut-qfy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="v4u-WT-ayF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JDz-ac-bun"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v6Q-uH-Ctu" firstAttribute="leading" secondItem="JDz-ac-bun" secondAttribute="leading" id="a1H-hZ-SyF"/>
+                            <constraint firstItem="JDz-ac-bun" firstAttribute="trailing" secondItem="v6Q-uH-Ctu" secondAttribute="trailing" id="bb2-Eg-CwZ"/>
+                            <constraint firstItem="v6Q-uH-Ctu" firstAttribute="bottom" secondItem="JDz-ac-bun" secondAttribute="bottom" id="cu2-mU-Ktx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customView" destination="yrn-U9-7gq" id="0zD-L3-uAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOY-me-qcm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197" y="-380"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" width="100" height="100"/>
+        <image name="pen" width="100" height="100"/>
+        <image name="rectangle" width="100" height="100"/>
+        <image name="triangle" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
