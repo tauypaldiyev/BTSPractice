@@ -16,6 +16,10 @@
 		91448E8C282B9E8A00C374D6 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91448E8B282B9E8A00C374D6 /* CustomView.xib */; };
 		91448E90282BA16C00C374D6 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91448E8F282BA16C00C374D6 /* CustomView.swift */; };
 		91448E94282BF9DA00C374D6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91448E93282BF9DA00C374D6 /* CalculatorViewController.swift */; };
+		91F2C334282EA70900261429 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F2C333282EA70900261429 /* MainViewController.swift */; };
+		91F2C336282EAA7500261429 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F2C335282EAA7500261429 /* FirstVC.swift */; };
+		91F2C338282EAC3D00261429 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F2C337282EAC3D00261429 /* SecondViewController.swift */; };
+		91F2C33A282EADF600261429 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F2C339282EADF600261429 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		91448E8B282B9E8A00C374D6 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		91448E8F282BA16C00C374D6 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		91448E93282BF9DA00C374D6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		91F2C333282EA70900261429 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		91F2C335282EAA7500261429 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		91F2C337282EAC3D00261429 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		91F2C339282EADF600261429 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				91448E7B282B9E7400C374D6 /* ViewController.swift */,
+				91F2C333282EA70900261429 /* MainViewController.swift */,
 				91448E93282BF9DA00C374D6 /* CalculatorViewController.swift */,
+				91F2C339282EADF600261429 /* ThirdViewController.swift */,
+				91F2C337282EAC3D00261429 /* SecondViewController.swift */,
+				91F2C335282EAA7500261429 /* FirstVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,9 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F2C338282EAC3D00261429 /* SecondViewController.swift in Sources */,
+				91F2C33A282EADF600261429 /* ThirdViewController.swift in Sources */,
 				91448E94282BF9DA00C374D6 /* CalculatorViewController.swift in Sources */,
 				91448E7C282B9E7400C374D6 /* ViewController.swift in Sources */,
 				91448E90282BA16C00C374D6 /* CustomView.swift in Sources */,
+				91F2C336282EAA7500261429 /* FirstVC.swift in Sources */,
+				91F2C334282EA70900261429 /* MainViewController.swift in Sources */,
 				91448E78282B9E7300C374D6 /* AppDelegate.swift in Sources */,
 				91448E7A282B9E7400C374D6 /* SceneDelegate.swift in Sources */,
 			);
