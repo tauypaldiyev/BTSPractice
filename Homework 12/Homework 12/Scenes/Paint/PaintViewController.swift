@@ -7,18 +7,47 @@
 
 import UIKit
 
+enum SegueType: String {
+    case area = "toPaintArea"
+    case control = "toControlArea"
+}
+
 class PaintViewController: UIViewController {
     
-    // MARK: - Views
+    @IBOutlet weak var separatorViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var separatorView: UIView!
     
-    @IBOutlet weak var customView: PaintView!
+    public weak var paintAreaController: PaintAreaViewController?
+    public weak var paintControlController: PaintControlViewController?
     
-    // MARK: - Methods
-    
-    @IBAction func shapePressed(_ sender: UIButton) {
-        guard let toolType = ToolType(rawValue: sender.tag) else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueType = SegueType(rawValue: segue.identifier ?? "") else { return }
         
-        customView.toolType = toolType
+        switch segueType {
+        case .area:
+            guard let controller = segue.destination as? PaintAreaViewController else { return }
+            
+            paintAreaController = controller
+        case .control:
+            guard let controller = segue.destination as? PaintControlViewController else { return }
+            
+            paintControlController = controller
+        }
+    }
+    
+    var startingConstant: CGFloat  = 0.0
+    
+    @IBAction func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            startingConstant = separatorViewBottomConstraint.constant
+        case .changed:
+            let translation = sender.translation(in: self.view)
+            print(translation.y)
+            separatorViewBottomConstraint.constant = startingConstant - translation.y
+        default:
+            break
+        }
     }
     
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917213D328314918006B3056 /* PaintControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917213D228314918006B3056 /* PaintControlViewController.swift */; };
+		917213D528314C2E006B3056 /* PaintAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917213D428314C2E006B3056 /* PaintAreaViewController.swift */; };
+		917213D7283161E5006B3056 /* ColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917213D6283161E5006B3056 /* ColorType.swift */; };
 		91E9744F282D53D1007E5120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9744E282D53D1007E5120 /* AppDelegate.swift */; };
 		91E97451282D53D1007E5120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E97450282D53D1007E5120 /* SceneDelegate.swift */; };
 		91E97456282D53D1007E5120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E97454282D53D1007E5120 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		917213D228314918006B3056 /* PaintControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintControlViewController.swift; sourceTree = "<group>"; };
+		917213D428314C2E006B3056 /* PaintAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintAreaViewController.swift; sourceTree = "<group>"; };
+		917213D6283161E5006B3056 /* ColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorType.swift; sourceTree = "<group>"; };
 		91E9744B282D53D1007E5120 /* Homework 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E9744E282D53D1007E5120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E97450282D53D1007E5120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,8 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				91E97471282D6061007E5120 /* PaintViewController.swift */,
+				917213D228314918006B3056 /* PaintControlViewController.swift */,
+				917213D428314C2E006B3056 /* PaintAreaViewController.swift */,
 				91E97475282D6A67007E5120 /* PaintView.swift */,
 				91E97477282D7DBD007E5120 /* ToolType.swift */,
+				917213D6283161E5006B3056 /* ColorType.swift */,
 			);
 			path = Paint;
 			sourceTree = "<group>";
@@ -213,7 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917213D528314C2E006B3056 /* PaintAreaViewController.swift in Sources */,
 				91E9746B282D55AB007E5120 /* StarViewController.swift in Sources */,
+				917213D328314918006B3056 /* PaintControlViewController.swift in Sources */,
+				917213D7283161E5006B3056 /* ColorType.swift in Sources */,
 				91E97478282D7DBD007E5120 /* ToolType.swift in Sources */,
 				91E97472282D6061007E5120 /* PaintViewController.swift in Sources */,
 				91E9744F282D53D1007E5120 /* AppDelegate.swift in Sources */,

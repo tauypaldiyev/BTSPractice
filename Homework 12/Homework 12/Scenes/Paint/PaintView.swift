@@ -12,7 +12,9 @@ class PaintView: UIView {
     // MARK: - Properties
     
     var toolType: ToolType = .pen
-    private var shapes: [UIBezierPath] = []
+    var colorType: ColorType = .blue
+    var isFilled: Bool = true
+    private var shapes: [(path: UIBezierPath, isFilled: Bool, colorType: ColorType)] = []
     private var initialPoint: CGPoint?
     private var initPoint: CGPoint?
     
@@ -20,10 +22,12 @@ class PaintView: UIView {
     
     override func draw(_ rect: CGRect) {
         for shape in shapes {
-            UIColor.blue.set()
-            shape.lineWidth = 2.0
-            shape.fill()
-            shape.stroke()
+            shape.colorType.color.set()
+            shape.path.lineWidth = 2.0
+            if shape.isFilled {
+                shape.path.fill()
+            }
+            shape.path.stroke()
         }
     }
     
@@ -64,6 +68,11 @@ class PaintView: UIView {
     
     // MARK: - Methods
     
+    public func undo() {
+        shapes.removeLast()
+        setNeedsDisplay()
+    }
+    
     private func drawCircle(_ firstPoint: CGPoint, _ secondPoint: CGPoint) {
         let circleCenter = CGPoint(
             x: (firstPoint.x + secondPoint.x) / 2,
@@ -79,7 +88,7 @@ class PaintView: UIView {
             endAngle: CGFloat(2 * Double.pi),
             clockwise: false
         )
-        shapes.append(circle)
+        shapes.append((isFilled: isFilled, path: circle, colorType: colorType))
         setNeedsDisplay()
     }
     
@@ -94,7 +103,7 @@ class PaintView: UIView {
         )
         let aRectangle = CGRect(origin: originPoint, size: rectSize)
         let rectangle = UIBezierPath(rect: aRectangle)
-        shapes.append(rectangle)
+        shapes.append((isFilled: isFilled, path: rectangle, colorType: colorType))
         setNeedsDisplay()
     }
     
@@ -103,7 +112,7 @@ class PaintView: UIView {
         triangle.move(to: CGPoint(x: firstPoint.x, y: firstPoint.y))
         triangle.addLine(to: CGPoint(x: firstPoint.x, y: secondPoint.y))
         triangle.addLine(to: CGPoint(x: secondPoint.x, y: secondPoint.y))
-        shapes.append(triangle)
+        shapes.append((isFilled: isFilled, path: triangle, colorType: colorType))
         setNeedsDisplay()
     }
     
@@ -111,7 +120,7 @@ class PaintView: UIView {
         let line = UIBezierPath()
         line.move(to: firstPoint)
         line.addLine(to: secondPoint)
-        shapes.append(line)
+        shapes.append((isFilled: isFilled, path: line, colorType: colorType))
         setNeedsDisplay()
     }
     
